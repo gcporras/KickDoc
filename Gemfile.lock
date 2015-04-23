@@ -69,6 +69,7 @@ GEM
       i18n (~> 0.5)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    hirb (0.7.3)
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
@@ -218,6 +219,7 @@ DEPENDENCIES
   carrierwave (~> 0.10.0)
   coffee-rails (~> 4.1.0)
   faker (~> 1.4.3)
+  hirb
   html2slim (~> 0.2.0)
   jbuilder (~> 2.0)
   jquery-rails

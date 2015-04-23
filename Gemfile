@@ -62,6 +62,8 @@ group :development, :test do
   gem "bullet", '~> 4.14.5'     # N+1 detection
 
   gem 'html2slim', '~> 0.2.0'
+
+  gem 'hirb'
 end
 
 group :production, :staging do
