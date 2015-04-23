@@ -59,9 +59,9 @@ html lang="en"
         .col-lg-3
           .well.sidebar-nav
             ul.nav.nav-pills.nav-stacked
-              - @categories.each do |category|
-                li class="#{ params[:category] == category ? "active" : nil }"
-                  = link_to category.humanize, "?category=%s" % category
+              - @genres.each do |genre|
+                li class="#{ params[:genre] == genre.title.underscore ? "active" : nil }"
+                  = link_to genre.title.humanize, "?genre=%s" % genre.title.underscore
 
       footer
         p &copy; Company 2015
