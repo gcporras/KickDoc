@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -28,9 +27,22 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'thin', '~> 1.6.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'newrelic_rpm'
+
+gem 'slim-rails', '~> 3.0.1'        # Slim html template
+gem 'kaminari', '~> 0.16.3'         # Pagination
+gem 'carrierwave', '~> 0.10.0'      # File uploads for Rails
+
+gem "therubyracer", '~> 0.12.2'
+gem "less-rails", '~> 2.7.0' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails", '~> 3.2.0'
+
+gem 'faker', '~> 1.4.3'       # Fake data
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -41,5 +53,19 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'rspec-rails', '~> 3.0'
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+
+  gem "bullet", '~> 4.14.5'     # N+1 detection
+
+  gem 'html2slim', '~> 0.2.0'
+
+  gem 'hirb'
 end
 
+group :production, :staging do
+  gem "pg"
+end
