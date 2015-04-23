@@ -42,6 +42,8 @@ gem "therubyracer", '~> 0.12.2'
 gem "less-rails", '~> 2.7.0' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails", '~> 3.2.0'
 
+gem 'faker', '~> 1.4.3'       # Fake data
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -57,7 +59,6 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 
-  gem 'faker', '~> 1.4.3'       # Fake data
   gem "bullet", '~> 4.14.5'     # N+1 detection
 
   gem 'html2slim', '~> 0.2.0'
